@@ -9,20 +9,26 @@
     <style>
         body {
             font-family: 'SF Pro Text', sans-serif;
-            background-color: #000; /* Change background to black */
-            color: #fff; /* Change text color to white */
+            background-color: #000; /* Set entire background to black */
+            color: #fff; /* Set text color to white */
         }
-        .nav-link:hover {
-            color: #0071e3;
+
+        /* Ensure all sections have a black background and white text */
+        section {
+            background-color: #000; /* Black background for all sections */
+            color: #fff; /* White text for all sections */
         }
-        .hero-title {
-            font-size: 3rem;
-            font-weight: 600;
+
+        /* Update links to have better contrast */
+        a {
+            color: #0071e3; /* Blue for links */
         }
-        .section-title {
-            font-size: 2rem;
-            font-weight: 600;
+
+        a:hover {
+            color: #66b2ff; /* Lighter blue on hover */
         }
+
+        /* Buttons */
         .btn-primary {
             background-color: #0071e3;
             color: white;
@@ -30,12 +36,23 @@
             border-radius: 20px;
             transition: background-color 0.3s;
         }
+
         .btn-primary:hover {
             background-color: #005bb5;
         }
+
+        /* Ensure dark mode styles are consistent */
         body.dark-mode {
-            background-color: #000; /* Ensure dark mode also uses black background */
-            color: #fff; /* Ensure dark mode text is white */
+            background-color: #000;
+            color: #fff;
+        }
+
+        body.dark-mode a {
+            color: #66b2ff;
+        }
+
+        body.dark-mode a:hover {
+            color: #0071e3;
         }
     </style>
 </head>
