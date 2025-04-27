@@ -33,6 +33,23 @@
         .btn-primary:hover {
             background-color: #005bb5;
         }
+        body.dark-mode {
+    background-color: #1d1d1f;
+    color: #f5f5f7;
+}
+
+body.dark-mode .nav-link:hover {
+    color: #66b2ff;
+}
+
+body.dark-mode .btn-primary {
+    background-color: #005bb5;
+    color: white;
+}
+
+body.dark-mode .btn-primary:hover {
+    background-color: #003f7f;
+}
     </style>
 </head>
 <body>
@@ -219,6 +236,27 @@
 
     &copy; 2025 Harish. All rights reserved.
 </footer>
+
+<script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    // Check for saved theme in localStorage
+    if (localStorage.getItem('theme') === 'dark') {
+        body.classList.add('dark-mode');
+        themeToggle.checked = true;
+    }
+
+    themeToggle.addEventListener('change', () => {
+        if (themeToggle.checked) {
+            body.classList.add('dark-mode');
+            localStorage.setItem('theme', 'dark');
+        } else {
+            body.classList.remove('dark-mode');
+            localStorage.setItem('theme', 'light');
+        }
+    });
+</script>
 
 </body>
 </html>
